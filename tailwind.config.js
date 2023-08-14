@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        '4-min(300)': 'repeat(auto-fit, minmax(300px, 1fr))',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -28,6 +31,9 @@ module.exports = {
           950: '#12392F',
         },
       },
+      plugins: [
+        require('tailwindcss-animated'),
+      ],
     },
   },
   plugins: [],
