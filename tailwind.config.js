@@ -31,10 +31,9 @@ module.exports = {
           950: '#12392F',
         },
       },
-      plugins: [
-        require('tailwindcss-animated'),
-      ],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated'),
+  ],
 };
