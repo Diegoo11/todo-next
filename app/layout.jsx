@@ -1,5 +1,7 @@
-import './globals.css';
 import { Inter } from 'next/font/google';
+import './globals.css';
+import LeftBar from './components/LeftBar';
+import BoxTasks from './components/BoxTasks';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -11,7 +13,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="flex min-h-screen items-center justify-between bg-downy-300">
+          <LeftBar />
+          <div className="w-full p-10 flex h-screen justify-between items-start gap-5">
+            <BoxTasks />
+            <div className="flex flex-col justify-start items-center bg-downy-200 rounded-lg
+    text-downy-900 w-full max-w-xs shadow-sm h-full p-10"
+            >
+              {children}
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
