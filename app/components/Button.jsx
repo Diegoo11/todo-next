@@ -1,9 +1,9 @@
-function Button({ children, onClick }) {
+function Button({ children, onClick, className }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className="hover:animate-shake"
+      className={`px-3 py-1 ${className}`}
     >
       {children}
     </button>

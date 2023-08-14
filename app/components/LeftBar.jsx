@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import Button from './Button';
+// import Profile from './Profile';
 
 function LeftBar() {
   return (
@@ -13,21 +15,21 @@ function LeftBar() {
           with Next
         </h1>
       </div>
-      <ul h1 className="h-3/6 flex flex-col items-center justify-center text-xl uppercase gap-4">
-        <li>
-          <Button>
+      <ul h1 className="h-3/6 flex flex-col items-center justify-center text-xl gap-4">
+        <li className="w-full">
+          <Link href="/" className="hover:bg-gray-800 px-3 py-1 rounded-md flex justify-center items-center w-full">
             Home
-          </Button>
+          </Link>
         </li>
-        <li>
-          <Button>
+        <li className="w-full">
+          <Button className="hover:bg-gray-800 px-3 py-1 rounded-md w-full">
             Profile
           </Button>
         </li>
         <li>
-          <Button>
-            Tasks
-          </Button>
+          <Link href="/addTask" className="hover:bg-gray-800 px-3 py-1 rounded-md w-full flex justify-center items-center h-9">
+            Add Tasks
+          </Link>
         </li>
       </ul>
       <ul h1 className="h-2/6 flex flex-col items-center justify-center text-xl uppercase gap-4">
