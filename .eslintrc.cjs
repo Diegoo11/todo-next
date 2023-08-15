@@ -7,5 +7,6 @@ module.exports = {
   extends: ['airbnb', 'next'],
   rules: {
     'linebreak-style': 0,
+    'import/prefer-default-export': 0,
   },
 };
