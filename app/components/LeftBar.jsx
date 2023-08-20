@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Button from './Button';
+import ProfileAcctions from './ProfileAcctions';
 // import Profile from './Profile';
 
 function LeftBar() {
@@ -15,16 +15,16 @@ function LeftBar() {
           with Next
         </h1>
       </div>
-      <ul h1 className="h-3/6 flex flex-col items-center justify-center text-xl gap-4">
+      <ul className="h-3/6 flex flex-col items-center justify-center text-xl gap-4">
         <li className="w-full">
           <Link href="/" className="hover:bg-gray-800 px-3 py-1 rounded-md flex justify-center items-center w-full">
             Home
           </Link>
         </li>
         <li className="w-full">
-          <Button className="hover:bg-gray-800 px-3 py-1 rounded-md w-full">
+          <Link href="/profile" className="hover:bg-gray-800 flex justify-center items-center px-3 py-1 rounded-md w-full">
             Profile
-          </Button>
+          </Link>
         </li>
         <li>
           <Link href="/addTask" className="hover:bg-gray-800 px-3 py-1 rounded-md w-full flex justify-center items-center h-9">
@@ -32,18 +32,7 @@ function LeftBar() {
           </Link>
         </li>
       </ul>
-      <ul h1 className="h-2/6 flex flex-col items-center justify-center text-xl uppercase gap-4">
-        <li>
-          <Button>
-            Log In
-          </Button>
-        </li>
-        <li>
-          <Button>
-            Sign in
-          </Button>
-        </li>
-      </ul>
+      <ProfileAcctions />
     </nav>
   );
 }
